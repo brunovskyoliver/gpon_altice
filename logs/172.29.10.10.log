@@ -1,0 +1,85 @@
+backup-manager/create --description=20240629_102959
+Backup file name: file20240629_103009_172_29_10_10.db
+/cli> backup-manager/export --local-file=file20240629_103009_172_29_10_10.db --server-ip=172.29.5.30
+/cli> Connection to 172.29.10.10 closed.
+
+
+Script zacal v case: 20240629_102959
+
+backup vytvoreny v: file20240629_103009_172_29_10_10.db
+
+backup exportovany do: 172.29.5.30.
+
+spawn ssh -o StrictHostKeyChecking=no brunovsky@172.29.10.202
+brunovsky@172.29.10.202's password: 
+You are logged in man!
+
+Your permission group is: administrator(15)
+
+ ===========================================
+                                            
+                OLT  Solution               
+               CLI Application              
+                                            
+               V3.15.0 
+                                            
+ ===========================================
+
+/cli> cannot start logging without first stopping logging
+    while executing
+"log_file -a $log_file"
+    invoked from within
+"expect {
+        -re {/cli>} {
+            log_file -a $log_file
+            send "backup-manager/create --description=$current_time\r"
+        }
+    ..."
+    ("foreach" body line 17)
+    invoked from within
+"foreach switch_ip $switches {
+    set log_file "$log_dir/$switch_ip.log"
+    set log_handle [open $log_file a]
+    puts $log_handle "\n\nScript zacal ..."
+    (file "./backup_script.sh" line 14)
+backup-manager/create --description=20240629_103152
+Backup file name: file20240629_103202_172_29_10_10.db
+/cli> backup-manager/export --local-file=file20240629_103202_172_29_10_10.db --server-ip=172.29.5.30
+/cli> close: file6 is not an expect channel - use spawn -open to convert
+    while executing
+"close -i $log_handle"
+    ("foreach" body line 50)
+    invoked from within
+"foreach switch_ip $switches {
+    set log_file "$log_dir/$switch_ip.log"
+    set log_handle [open $log_file a]
+    puts $log_handle "\n\nScript zacal ..."
+    (file "./backup_script.sh" line 14)
+
+
+Script zacal v case: 20240629_103152
+
+backup vytvoreny v: file20240629_103202_172_29_10_10.db
+
+backup exportovany do: 172.29.5.30.
+
+
+
+Script zacal v case: 20240629_103434
+
+
+
+Script zacal v case: 20240629_103455
+
+backup vytvoreny v: file20240629_103505_172_29_10_10.db
+
+backup exportovany do: 172.29.5.30.
+
+
+
+Script zacal v case: 20240716_072608
+
+backup vytvoreny v: file20240716_072618_172_29_10_10.db
+
+backup exportovany do: 172.29.5.30.
+
